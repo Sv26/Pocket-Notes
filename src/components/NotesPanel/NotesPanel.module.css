@@ -1,0 +1,159 @@
+/* ================= PANEL ================= */
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #eaf0ff;
+  overflow: visible;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #0047ff;
+  color: white;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ================= AVATAR ================= */
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= NOTES LIST ================= */
+.notes {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* NOTE ITEM */
+.note {
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.note p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.note span {
+  font-size: 12px;
+  color: #777;
+  float: right;
+}
+
+/* ================= INPUT BOX (BASE) ================= */
+.inputBox {
+  /* ❌ REMOVED position: relative */
+  border: 15px solid #0047ff;
+  background: white;
+  padding: 12px 48px 12px 12px;
+}
+
+/* TEXTAREA */
+.inputBox textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  height: 70px;
+  background: transparent;
+}
+
+/* SEND BUTTON */
+.inputBox button {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0047ff;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputBox button:disabled {
+  background: #bfc9ff;
+  cursor: not-allowed;
+}
+.panel {
+  position: relative;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(234, 240, 255, 0.85);
+  z-index: 0;
+}
+
+.panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.backBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE  ================= */
+@media (max-width: 768px) {
+  .panel {
+    height: 100vh;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .notes {
+    padding-bottom: 180px;
+  }
+
+  .inputBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+  .backBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

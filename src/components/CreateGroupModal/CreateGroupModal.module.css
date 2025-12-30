@@ -1,0 +1,75 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Input */
+.modal input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.modal input:focus {
+  border-color: #0047ff;
+}
+
+/* Color picker */
+.colors {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.colors button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.active {
+  outline: 2px solid #0047ff;
+  outline-offset: 2px;
+}
+
+/* Create button */
+.createBtn {
+  width: 100%;
+  padding: 12px;
+  background: #0047ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.createBtn:hover {
+  background: #0036cc;
+}
