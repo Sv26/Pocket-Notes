@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import NotesPanel from "../components/NotesPanel/NotesPanel";
 import { load, save } from "../utils/storage";
 import bgImage from "../assets/note.png";
+
 const Home = () => {
   const { groupId } = useParams();
   const navigate = useNavigate();
